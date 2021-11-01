@@ -20,7 +20,7 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -43,7 +43,7 @@
   "devDependencies": {
     "gh-pages": "^3.2.3"
   },
-  
+
   "homepage": "http://LegoWalker.github.io/react-redux-todo-app"
   
 }
