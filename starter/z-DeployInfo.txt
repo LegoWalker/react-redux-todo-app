@@ -1,0 +1,36 @@
+
+1) Install the gh-pages package as a dev-dependency of the React app.
+   "npm install gh-pages --save-dev"
+
+2) Open the 'package.json' in your React application and add the "homepage" property.
+    "http://{username}.github.io/{repo-name}", 
+    where username is your GitHub username, and {repo-name} is the name of the GitHub repository.
+
+    So in my case:  "homepage": "http://LegoWalker.github.io/react-redux-todo-app"
+
+3) Add the deploy script commands in your project’s 'package.json' file.
+    In the 'package.json' file, add the "predeploy" property and the "deploy" property 
+    with the existing "scripts" property. Your package.json scripts should like this:
+
+    "scripts": { 
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+    },
+
+    The predeploy script initiates after running our deploy script, which bundles our 
+    application for deployment.
+
+4) Now, deploy your application to "GitHub Pages". 
+    For that, run the following commands in the integrated PowerShell/terminal in VS Code:
+    
+    "npm run deploy"
+
+5) When you’ve successfully deployed the app, open the GitHub repository in your browser.
+    Click the settings tab of the repository and scroll down until you reach the 
+    GitHub Pages section and choose the "gh-pages branch" as the source.
+
+Boom! your React application is hosted on GitHub Pages!
